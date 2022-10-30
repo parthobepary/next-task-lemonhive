@@ -1,0 +1,17 @@
+[
+    {
+        "time": "08-11-2022",
+        "name":"Intro the conference",
+        "distance":"08.00-11.00"
+    },
+    {
+        "time": "16-11-2022",
+        "name":"Lunch breake",
+        "distance":"08.00-11.00"
+    },
+    {
+        "time": "25-11-2022",
+        "name":"Take clint meeting",
+        "distance":"08.00-11.00"
+    }
+]
