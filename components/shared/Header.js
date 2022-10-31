@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import logo from "../../images/React 1.svg";
-import styel from "../../styles/Navbar.module.css"
+import styel from "../../styles/Navbar.module.css";
 
 function Header({ children }) {
   return (
@@ -22,7 +22,7 @@ function Header({ children }) {
               <div>
                 <ul className="menu menu-horizontal text-yellow-500 font-bold">
                   <li>
-                    <Link href="/">Home</Link>
+                    <Link href="/home">Home</Link>
                   </li>
                   <li>
                     <Link href="/confernce">Coference Info</Link>
@@ -69,7 +69,7 @@ function Header({ children }) {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/about">Coference Info</Link>
+              <Link href="/confernce">Coference Info</Link>
             </li>
             <li>
               <Link href="/whatwedo">What we do</Link>

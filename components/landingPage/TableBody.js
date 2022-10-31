@@ -1,18 +1,13 @@
+import Link from "next/link";
 import React from "react";
 import Draggable from "react-draggable";
 import style from "../../styles/TableBody.module.css";
 
 function TableBody({ allevents }) {
-  const details = (item) => {
-    console.log(item);
-  };
-
   const eventHandler = (e, data) => {
-    console.log('Event Type', e.type);
-    console.log({e, data});
-  }
- 
-
+    console.log("Event Type", e.type);
+    console.log({ e, data });
+  };
 
   return (
     <div className="flex">
@@ -26,24 +21,21 @@ function TableBody({ allevents }) {
           return (
             <div key={i}>
               {evn.event.length ? (
-                evn.event.map((ev, i) => {
+                evn.event.map((ev, index) => {
                   return (
                     <div
                       className={`flex items-center justify-center h-full ${style.slot_time}`}
-                      key={i}
+                      key={index}
                     >
                       <Draggable onStart={eventHandler}>
                         <div className={style.drag_box}>
                           <p className={style.drag_hading}>{ev.time}</p>
                           <div>
-                            <p>{ev.name}</p>
+                            <p>{ev.name} {index}</p>
                             <p>{ev.distance}</p>
-                            <button
-                              onClick={() => details(ev)}
-                              className="btn btn-xs"
-                            >
-                              details
-                            </button>
+                            <div className="btn btn-xs">
+                              <Link href={`/home/${JSON.stringify(ev)}`}>Coference Info</Link>
+                            </div>
                           </div>
                         </div>
                       </Draggable>
