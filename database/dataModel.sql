@@ -1,9 +1,9 @@
 CREATE DATABASE todoapp;
 
-CREATE TABLE todo(
+CREATE TABLE empolyee(
     todo_id SERIAL PRIMARY KEY,
-    description VARCHAR(255),
-    time VARCHAR(255),
-    name VARCHAR(255),
-    distance VARCHAR(255)
+    author VARCHAR(255),
+    company VARCHAR(255),
+    img VARCHAR(255),
+    pera VARCHAR(255)
 );

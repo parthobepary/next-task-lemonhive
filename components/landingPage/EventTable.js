@@ -1,20 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import fakeData from "../../json/schedule2.json";
 import style from "../../styles/EventSchedule.module.css";
 import TableBody from "./TableBody";
 import TableHeading from "./TableHeading";
 
 const EventTable = () => {
-
   const [events, setEvents] = useState();
 
-  /*   useEffect(() => {
+  useEffect(() => {
     fetch("http://localhost:3000/api/data")
       .then((res) => res.json())
       .then((data) => {
         setEvents(data);
       });
-  }, []); */
+  }, []);
 
   console.log(events);
 

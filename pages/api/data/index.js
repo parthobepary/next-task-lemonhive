@@ -10,7 +10,7 @@ const handler = async (req, res) => {
   switch (req.method) {
     case "GET":
       try {
-        const allTodos = await pool.query("SELECT * FROM todo");
+        const allTodos = await pool.query("SELECT * FROM empolyee");
         res.json(allTodos.rows);
       } catch (error) {
         console.log(error.message);
@@ -18,10 +18,10 @@ const handler = async (req, res) => {
       break;
     case "POST":
       try {
-        const { description, time, name, distance } = req.body;
+        const { author, company, img, pera } = req.body;
         const newTodo = await pool.query(
-          "INSERT INTO todo (description, time, name, distance) VALUES($1, $2, $3, $4)",
-          [description, time, name, distance]
+          "INSERT INTO empolyee (author, company, img, pera) VALUES($1, $2, $3, $4)",
+          [author, company, img, pera]
         );
         res.json(newTodo);
       } catch (error) {

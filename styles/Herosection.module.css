@@ -32,14 +32,15 @@
   position: relative;
 }
 .img3 {
+  background-color: #0a142f;
   position: absolute;
-  bottom: 120px;
+  top: 400px;
   left: -60px;
 }
 .parent_container {
   background-image: url("../images//Vector\ 1.svg");
   background-repeat: no-repeat;
-  background-position: 190% 40%;
+  background-position: 390% 20%;
   background-origin: content-box;
   object-fit: fill;
 }

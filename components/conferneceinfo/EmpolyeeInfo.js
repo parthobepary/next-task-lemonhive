@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import vector from "../../images/Vector.svg";
 import empolyee from "../../json/empolyee.json";
 import style from "../../styles/Employee.module.css";
@@ -11,6 +11,15 @@ const EmpolyeeInfo = () => {
   const [button4, setButton4] = useState(false);
   const [button5, setButton5] = useState(false);
   const [employees, setEmployee] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/api/data")
+      .then((res) => res.json())
+      .then((data) => {
+        setEmployee(data);
+      });
+  }, []);
+
   const isActive1 = () => {
     setButton1(true);
     setButton2(false);
