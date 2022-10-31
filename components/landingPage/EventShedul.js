@@ -9,6 +9,7 @@ const EventShedul = () => {
         title="Event Schedule"
         pera="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dolores."
       ></Title>
+      <EventTable />
     </div>
   );
 };

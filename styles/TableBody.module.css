@@ -1,0 +1,19 @@
+.event_body {
+  width: calc(1319px / 7);
+  border: 1px solid gray;
+  height: calc(648px / 3);
+}
+.slot_time {
+  width: calc(1319px / 7);
+  height: calc((648px - 52px) / 3);
+  border: 1px solid gray;
+}
+.drag_box {
+  background-color: lightgoldenrodyellow;
+  text-align: center;
+  padding: 5px 10px;
+}
+.drag_hading {
+  font-size: 20px;
+  font-weight: 700px;
+}

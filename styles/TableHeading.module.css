@@ -1,0 +1,9 @@
+.flex_box {
+  height: 50px;
+  border-bottom: 1px solid gray;
+
+}
+.first_child:nth-child(1) {
+  border-right: 2px solid gray;
+  width:1520px;
+}

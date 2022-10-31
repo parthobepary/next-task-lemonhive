@@ -1,5 +1,11 @@
-import mongoose from "mongoose";
+const Pool = require("pg").Pool;
 
-if (mongoose.Connection.readyState !== 4) {
-  mongoose.connect('mongodb://localhost:27017/demo');
-}
+const pool = new Pool({
+  user: "postgres",
+  password: "1234",
+  host: "localhost",
+  port: 5432,
+  database: "todoapp",
+});
+
+module.exports = pool;

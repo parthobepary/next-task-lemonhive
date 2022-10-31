@@ -1,16 +1,32 @@
-require("../../../database/init");
-import DataModel from "../../../database/dataModel";
+const express = require("express");
+const app = express();
+const cors = require("cors");
+const pool = require("../../../database/init");
+
+app.use(cors());
+app.use(express.json());
 
 const handler = async (req, res) => {
   switch (req.method) {
     case "GET":
-      const datas = await DataModel.find({});
-      res.json(datas);
+      try {
+        const allTodos = await pool.query("SELECT * FROM todo");
+        res.json(allTodos.rows);
+      } catch (error) {
+        console.log(error.message);
+      }
       break;
     case "POST":
-      const body = req.body;
-      const result = await DataModel.create(body);
-      res.json(result);
+      try {
+        const { description, time, name, distance } = req.body;
+        const newTodo = await pool.query(
+          "INSERT INTO todo (description, time, name, distance) VALUES($1, $2, $3, $4)",
+          [description, time, name, distance]
+        );
+        res.json(newTodo);
+      } catch (error) {
+        console.log(error.message);
+      }
       break;
     default:
       res.json({ error: "Method not allowed" });

@@ -1,17 +1,54 @@
 [
-  {
-    "time": "01-11-2022",
-    "name": "Tea break and rest",
-    "distance": "08.00-11.00"
-  },
-  {
-    "time": "01-11-2022",
-    "name": "Tea break and rest",
-    "distance": "08.00-11.00"
-  },
-  {
-    "time": "01-11-2022",
-    "name": "Tea break and rest",
-    "distance": "08.00-11.00"
-  }
+  { "slot": "0.9:00" },
+  [
+    {
+      "name": "event1",
+      "event": [
+
+      ]
+    },
+    {
+      "name": "event1",
+      "event": [
+        {
+          "time": "01-11-2022",
+          "name": "Tea break and rest",
+          "distance": "08.00-11.00",
+          "deadline": "2022-12-30"
+        }
+      ]
+    },
+    {
+      "name": "event1",
+      "event": [
+      ]
+    },
+    {
+      "name": "event1",
+      "event": [
+        {
+          "time": "01-11-2022",
+          "name": "Tea break and rest",
+          "distance": "08.00-11.00",
+          "deadline": "2022-12-30"
+        }
+      ]
+    },
+    {
+      "name": "event1",
+      "event": [
+      ]
+    },
+    {
+      "name": "event1",
+      "event": [
+        {
+          "time": "01-11-2022",
+          "name": "Tea break and rest",
+          "distance": "08.00-11.00",
+          "deadline": "2022-12-30"
+        }
+      ]
+    }
+  ]
 ]
